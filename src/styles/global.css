@@ -274,7 +274,7 @@
 .angkasa_slide {
   position: relative;
   width: 100%;
-  height: 100svh;
+  height: 100vh;
   overflow: hidden;
   scroll-snap-align: start;
   display: flex;
@@ -282,12 +282,6 @@
   align-items: center;
 }
 
-/* fallback jika browser tidak support 100svh */
-@supports (height: 100svh) {
-  .angkasa_slide {
-    height: 100svh !important;
-  }
-}
 
 
 /* ====================================================================
