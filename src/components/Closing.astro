@@ -1,11 +1,9 @@
 ---
 import { UNDANGAN_CONFIG } from '../data/config'
 import OrnamentBackground from './OrnamentBackground.astro'
-const { brideName, groomName } = UNDANGAN_CONFIG
-const namaMempelai = `${brideName} / ${groomName}`
+const { brideFullName, groomFullName } = UNDANGAN_CONFIG
 const sponsorImages = UNDANGAN_CONFIG.sponsors
 
-const gridCols = `grid-cols-${sponsorImages.length >= 2 ? '2' : '1'}`
 import OrnamentBackground from './OrnamentBackground.astro'
 ---
 
@@ -55,16 +53,45 @@ import OrnamentBackground from './OrnamentBackground.astro'
           data-animation-class="animate__zoomIn"
           class="ornament-item animate__slower animate__delay-1s mt-6"
         >
-          <p class="font-judul color-accent text-lg italic">
+          <p class="font-judul color-accent mb-4 text-lg italic">
             Kami yang berbahagia
           </p>
-          <h3
-            id="couple-names-combined"
-            class="font-dekor-2 color-accent pt-2 text-3xl font-semibold tracking-wide"
+
+          <!-- 3 Kolom: Bride | Heart | Groom -->
+          <div
+            class="mx-auto grid w-full max-w-[420px] grid-cols-[1fr_auto_1fr] items-center gap-4 text-center"
           >
-            {namaMempelai}
-          </h3>
-          <p class="font-base mt-1 text-sm italic opacity-80">
+            <!-- Bride -->
+            <div class="flex flex-col">
+              <h3
+                class="font-dekor-2 color-accent text-xl font-semibold tracking-wide whitespace-nowrap sm:text-2xl"
+              >
+                {brideFullName}
+              </h3>
+              <p class="font-base mt-1 text-xs italic opacity-80">
+                Mempelai Wanita
+              </p>
+            </div>
+
+            <!-- Middle Heart -->
+            <div class="flex items-center justify-center px-1">
+              <i class="fa-solid fa-heart color-accent text-[20px]"></i>
+            </div>
+
+            <!-- Groom -->
+            <div class="flex flex-col">
+              <h3
+                class="font-dekor-2 color-accent text-xl font-semibold tracking-wide whitespace-nowrap sm:text-2xl"
+              >
+                {groomFullName}
+              </h3>
+              <p class="font-base mt-1 text-xs italic opacity-80">
+                Mempelai Pria
+              </p>
+            </div>
+          </div>
+
+          <p class="font-base mt-4 text-sm italic opacity-80">
             (Beserta Keluarga Besar)
           </p>
         </div>
@@ -84,7 +111,7 @@ import OrnamentBackground from './OrnamentBackground.astro'
           <!-- GRID LOGO -->
           <div
             id="sponsor-container"
-            class="grid w-full grid-cols-2 justify-items-center gap-4 sm:grid-cols-4"
+            class="grid w-full grid-cols-2 justify-items-center gap-4 sm:grid-cols-2"
           >
             {
               sponsorImages.map((imagePath) => (
