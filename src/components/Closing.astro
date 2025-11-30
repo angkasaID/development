@@ -9,20 +9,20 @@ const gridCols = `grid-cols-${sponsorImages.length >= 2 ? '2' : '1'}`
 
 <div
   id="closing"
-  class="angkasa_slide px-6 relative min-h-screen flex flex-col justify-center items-center snap-start"
+  class="angkasa_slide relative flex snap-start items-center justify-center overflow-hidden"
   data-section="closing"
 >
-  <div id="opening-ornaments" class="absolute inset-0 pointer-events-none">
+  <div id="opening-ornaments" class="pointer-events-none absolute inset-0">
     <img
       data-animation-class="animate__fadeInTopLeft"
-      class="ornament-item frame-tl top-0 left-0 absolute z-0 animate__slower lazy-load-img"
+      class="ornament-item frame-tl animate__slower lazy-load-img absolute top-0 left-0 z-0"
       src="./asset/images/tl.webp"
       onerror="this.src='https://placehold.co/150x150/C6915A/white?text=Top+Left'"
       alt="frame top left"
     />
     <img
       data-animation-class="animate__fadeInTopRight"
-      class="ornament-item frame-tr top-0 right-0 absolute z-0 animate__slower lazy-load-img"
+      class="ornament-item frame-tr animate__slower lazy-load-img absolute top-0 right-0 z-0"
       src="./asset/images/tr.webp"
       onerror="this.src='https://placehold.co/150x150/C6915A/white?text=Top+Right'"
       alt="frame top right"
@@ -31,7 +31,7 @@ const gridCols = `grid-cols-${sponsorImages.length >= 2 ? '2' : '1'}`
     <!-- Ornament Bawah (Center Flower) -->
     <div
       data-animation-class="animate__fadeInBottomLeft"
-      class="frame-bl absolute bottom-0 left-0 ornament-item animate__slow"
+      class="frame-bl ornament-item animate__slow absolute bottom-0 left-0"
       style="animation-delay: 2.5s"
     >
       <div class="animate-left" style="transform: translate(-29%, -85%)">
@@ -46,7 +46,7 @@ const gridCols = `grid-cols-${sponsorImages.length >= 2 ? '2' : '1'}`
 
     <div
       data-animation-class="animate__fadeInBottomLeft"
-      class="frame-bl absolute bottom-0 left-0 ornament-item animate__slow"
+      class="frame-bl ornament-item animate__slow absolute bottom-0 left-0"
       style="animation-delay: 2.2s"
     >
       <div class="animate-left" style="transform: translate(-27%, -87%)">
@@ -61,7 +61,7 @@ const gridCols = `grid-cols-${sponsorImages.length >= 2 ? '2' : '1'}`
 
     <div
       data-animation-class="animate__fadeInBottomLeft"
-      class="frame-bl absolute bottom-0 left-0 ornament-item animate__slow"
+      class="frame-bl ornament-item animate__slow absolute bottom-0 left-0"
       style="animation-delay: 2s"
     >
       <div class="animate-left" style="transform: translate(-16%, -70%)">
@@ -76,7 +76,7 @@ const gridCols = `grid-cols-${sponsorImages.length >= 2 ? '2' : '1'}`
 
     <div
       data-animation-class="animate__fadeInBottomRight"
-      class="frame-br absolute bottom-0 right-0 ornament-item animate__slow"
+      class="frame-br ornament-item animate__slow absolute right-0 bottom-0"
       style="animation-delay: 2.5s"
     >
       <div class="animate-right" style="transform: translate(29%, -85%)">
@@ -91,7 +91,7 @@ const gridCols = `grid-cols-${sponsorImages.length >= 2 ? '2' : '1'}`
 
     <div
       data-animation-class="animate__fadeInBottomRight"
-      class="frame-br absolute bottom-0 right-0 ornament-item animate__slow"
+      class="frame-br ornament-item animate__slow absolute right-0 bottom-0"
       style="animation-delay: 2.2s"
     >
       <div class="animate-right" style="transform: translate(27%, -87%)">
@@ -106,7 +106,7 @@ const gridCols = `grid-cols-${sponsorImages.length >= 2 ? '2' : '1'}`
 
     <div
       data-animation-class="animate__fadeInBottomRight"
-      class="frame-br absolute bottom-0 right-0 ornament-item animate__slow"
+      class="frame-br ornament-item animate__slow absolute right-0 bottom-0"
       style="animation-delay: 2s"
     >
       <div class="animate-right" style="transform: translate(16%, -70%)">
@@ -120,10 +120,13 @@ const gridCols = `grid-cols-${sponsorImages.length >= 2 ? '2' : '1'}`
     </div>
 
     <div
-      class="ornamen-bawah right-0 bottom-0 w-full md:w-11/12 absolute z-0"
+      class="ornamen-bawah absolute right-0 bottom-0 z-0 w-full md:w-11/12"
       style="transform: translate(0, 0)"
     >
-      <div data-animation-class="animate__fadeIn" class="ornament-item animate__slower">
+      <div
+        data-animation-class="animate__fadeIn"
+        class="ornament-item animate__slower"
+      >
         <img
           src="./asset/images/bm.webp"
           alt="flowers"
@@ -135,7 +138,7 @@ const gridCols = `grid-cols-${sponsorImages.length >= 2 ? '2' : '1'}`
     </div>
 
     <div
-      class="frame-tl left-0 absolute top-0 z-0 ornament-item animate__slower"
+      class="frame-tl ornament-item animate__slower absolute top-0 left-0 z-0"
       data-animation-class="animate__fadeInTopLeft"
     >
       <div class="animate-left" style="transform: translate(-5%, 145%)">
@@ -150,7 +153,7 @@ const gridCols = `grid-cols-${sponsorImages.length >= 2 ? '2' : '1'}`
     </div>
 
     <div
-      class="frame-tr right-0 absolute top-0 z-0 ornament-item animate__slower"
+      class="frame-tr ornament-item animate__slower absolute top-0 right-0 z-0"
       data-animation-class="animate__fadeInTopRight"
     >
       <div class="animate-right" style="transform: translate(5%, 145%)">
@@ -166,9 +169,12 @@ const gridCols = `grid-cols-${sponsorImages.length >= 2 ? '2' : '1'}`
 
     <!-- Wayang Kiri -->
     <div
-      class="anim-float-left ornamen-bawah left-0 bottom-0 w-[50%] absolute z-0 translate-x-[0%] translate-y-[10%]"
+      class="anim-float-left ornamen-bawah absolute bottom-0 left-0 z-0 w-[50%] translate-x-[0%] translate-y-[10%]"
     >
-      <div class="ornament-item animate__slower" data-animation-class="animate__fadeInBottomLeft">
+      <div
+        class="ornament-item animate__slower"
+        data-animation-class="animate__fadeInBottomLeft"
+      >
         <img
           src="./asset/images/bl-2.webp"
           onerror="this.src='https://placehold.co/100x100/C6915A/white?text=Wayang+Kiri'"
@@ -180,9 +186,12 @@ const gridCols = `grid-cols-${sponsorImages.length >= 2 ? '2' : '1'}`
     </div>
     <!-- Bunga Kiri -->
     <div
-      class="anim-float-left ornamen-bawah left-0 bottom-0 w-[30%] absolute z-0 translate-x-[20%] translate-y-[5%]"
+      class="anim-float-left ornamen-bawah absolute bottom-0 left-0 z-0 w-[30%] translate-x-[20%] translate-y-[5%]"
     >
-      <div data-animation-class="animate__fadeInBottomLeft" class="ornament-item animate__slower">
+      <div
+        data-animation-class="animate__fadeInBottomLeft"
+        class="ornament-item animate__slower"
+      >
         <img
           src="./asset/images/bunga-kiri.webp"
           onerror="this.src='https://placehold.co/100x100/C6915A/white?text=Bunga+Kiri'"
@@ -194,9 +203,12 @@ const gridCols = `grid-cols-${sponsorImages.length >= 2 ? '2' : '1'}`
     </div>
     <!-- Wayang Kanan -->
     <div
-      class="anim-float-right ornamen-bawah right-0 bottom-0 w-[50%] absolute z-0 translate-x-[0%] translate-y-[10%]"
+      class="anim-float-right ornamen-bawah absolute right-0 bottom-0 z-0 w-[50%] translate-x-[0%] translate-y-[10%]"
     >
-      <div data-animation-class="animate__fadeInBottomRight" class="ornament-item animate__slower">
+      <div
+        data-animation-class="animate__fadeInBottomRight"
+        class="ornament-item animate__slower"
+      >
         <img
           src="./asset/images/br-2.webp"
           onerror="this.src='https://placehold.co/100x100/C6915A/white?text=Wayang+Kanan'"
@@ -208,9 +220,12 @@ const gridCols = `grid-cols-${sponsorImages.length >= 2 ? '2' : '1'}`
     </div>
     <!-- Bunga Kanan -->
     <div
-      class="anim-float-right ornamen-bawah right-0 bottom-0 w-[30%] absolute z-0 translate-x-[-20%] translate-y-[5%]"
+      class="anim-float-right ornamen-bawah absolute right-0 bottom-0 z-0 w-[30%] translate-x-[-20%] translate-y-[5%]"
     >
-      <div data-animation-class="animate__fadeInBottomRight" class="ornament-item animate__slower">
+      <div
+        data-animation-class="animate__fadeInBottomRight"
+        class="ornament-item animate__slower"
+      >
         <img
           src="./asset/images/bunga-kanan.webp"
           onerror="this.src='https://placehold.co/100x100/C6915A/white?text=Bunga+Kanan'"
@@ -221,66 +236,89 @@ const gridCols = `grid-cols-${sponsorImages.length >= 2 ? '2' : '1'}`
       </div>
     </div>
   </div>
-  <!--Tutup Container Ornament-->
-
   <div
-    class="blur-card bg-white/30 backdrop-blur-sm animated-content rounded-3xl mt-10 h-full w-full flex flex-col justify-center items-center z-10"
+    class="angkasa_inner flex h-[calc(100dvh-80px)] w-full flex-col justify-center px-6 py-6 pt-10 sm:px-6 sm:py-8"
   >
-    <div class="font-dekor-1 content-layer text-center space-y-6 mx-6">
-      <!-- Judul -->
-      <h3
-        data-animation-class="animate__fadeInDown"
-        class="ornament-item animate__slow text-3xl font-judul italic color-accent-2 border-b border-rose-gold pb-2 mb-4 inline-block"
-      >
-        ✤ Terimakasih ✤
-      </h3>
-
-      <!-- Paragraf -->
-      <p
-        data-animation-class="animate__zoomIn"
-        class="text-[15px] leading-relaxed ornament-item animate__slower"
-      >
-        Merupakan suatu kehormatan dan kebahagiaan yang tak terhingga bagi kami, apabila Bapak/Ibu,
-        Saudara/i berkenan hadir untuk memberikan do'a restu.
-      </p>
-
-      <p
-        data-animation-class="animate__zoomIn"
-        class="text-[15px] leading-relaxed ornament-item animate__slower"
-      >
-        Semoga Allah SWT senantiasa melimpahkan rahmat-Nya kepada kita semua.
-      </p>
-
-      <!-- Nama Mempelai -->
-      <div data-animation-class="animate__zoomIn" class="ornament-item">
-        <p class="font-judul text-lg italic color-accent">Kami yang berbahagia</p>
-        <h3
-          id="couple-names-combined"
-          class="font-dekor-2 font-semibold text-3xl pt-2 color-accent tracking-wide"
-        >
-          {namaMempelai}
-        </h3>
-        <p class="font-base italic text-sm mt-1 opacity-80">(Beserta Keluarga Besar)</p>
-      </div>
-
-      <!-- Sponsor -->
+    <div
+      class="blur-card animated-content flex h-full w-full max-w-[540px] flex-col justify-center rounded-3xl bg-(--inv-bg)/30 p-6 shadow-lg backdrop-blur-sm sm:p-8"
+    >
       <div
-        data-animation-class="animate__fadeInUp"
-        class="mt-14 pt-8 border-t border-(--inv-border) ornament-item animate__slower animate__delay1s"
+        class="content-layer font-dekor-1 mx-auto w-full max-w-[420px] px-4 py-4 text-center sm:px-6"
       >
-        <p class="text-xs text-color-base opacity-70 mb-4 tracking-wide">Supported by :</p>
-
-        <div
-          id="sponsor-container"
-          class={`grid ${gridCols} gap-3 items-center justify-center max-w-sm mx-auto transition-all`}
+        <!-- Judul -->
+        <h3
+          data-animation-class="animate__fadeInDown"
+          class="ornament-item animate__slow font-judul color-accent-2 border-rose-gold mb-4 inline-block border-b pb-2 text-3xl italic"
         >
-          {
-            sponsorImages.map((imagePath) => (
-              <div class="flex justify-center items-center p-1 bg-blur rounded-lg shadow-md h-16">
-                <img src={imagePath} alt="Sponsor Logo" class="h-auto w-30 " loading="lazy" />
-              </div>
-            ))
-          }
+          ✤ Terimakasih ✤
+        </h3>
+
+        <!-- Paragraf -->
+        <p
+          data-animation-class="animate__zoomIn"
+          class="ornament-item animate__slower text-[15px] leading-relaxed"
+        >
+          Merupakan suatu kehormatan dan kebahagiaan yang tak terhingga bagi
+          kami, apabila Bapak/Ibu, Saudara/i berkenan hadir untuk memberikan
+          do'a restu.
+        </p>
+
+        <p
+          data-animation-class="animate__zoomIn"
+          class="ornament-item animate__slower text-[15px] leading-relaxed"
+        >
+          Semoga Allah SWT senantiasa melimpahkan rahmat-Nya kepada kita semua.
+        </p>
+
+        <!-- Nama Mempelai -->
+        <div
+          data-animation-class="animate__zoomIn"
+          class="ornament-item animate__slower animate__delay-1s mt-6"
+        >
+          <p class="font-judul color-accent text-lg italic">
+            Kami yang berbahagia
+          </p>
+          <h3
+            id="couple-names-combined"
+            class="font-dekor-2 color-accent pt-2 text-3xl font-semibold tracking-wide"
+          >
+            {namaMempelai}
+          </h3>
+          <p class="font-base mt-1 text-sm italic opacity-80">
+            (Beserta Keluarga Besar)
+          </p>
+        </div>
+
+        <!-- Sponsor -->
+        <div
+          data-animation-class="animate__fadeInUp"
+          class="ornament-item animate__slower animate__delay1s mt-12 pt-10 text-center"
+        >
+          <!-- LABEL -->
+          <p
+            class="text-color-base mb-6 text-[12px] tracking-widest uppercase opacity-70"
+          >
+            Supported by
+          </p>
+
+          <!-- GRID LOGO -->
+          <div
+            id="sponsor-container"
+            class="grid w-full grid-cols-2 justify-items-center gap-4 sm:grid-cols-4"
+          >
+            {
+              sponsorImages.map((imagePath) => (
+                <div class="flex items-center justify-center rounded-xl border border-white/30 bg-white/20 p-2 shadow-sm backdrop-blur-md transition-all hover:bg-white/30">
+                  <img
+                    src={imagePath}
+                    alt="Sponsor Logo"
+                    class="max-h-[40px] w-auto opacity-90 sm:max-h-[50px]"
+                    loading="lazy"
+                  />
+                </div>
+              ))
+            }
+          </div>
         </div>
       </div>
     </div>

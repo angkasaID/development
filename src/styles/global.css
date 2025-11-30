@@ -16,10 +16,10 @@
   --inv-accent: #b88821;
   --inv-accent2: #c6915a;
   --color-text-default: #49312b;
-  --inv-border: #c6915a;
-  --menu-bg: #cdd7e2;
+  --inv-border: #c8d1d6;
+  --menu-bg: #dadde0;
   --menu-inactive: #265875;
-  --menu-active: #265875;
+  --menu-active: #b88821;
   --btn-color: #ffffff;
 
   /* --- Z-INDEX --- */
@@ -44,6 +44,10 @@ body.no-scroll {
 
 /* COVER SELALU PENUH DAN TIDAK BISA DI-SCROLL */
 #cover-section-overlay {
+  width: 100vw;
+  transition:
+    transform 1.2s cubic-bezier(0.65, 0.05, 0.36, 1),
+    opacity 0.4s ease-out;
   height: 100svh;
   overflow: hidden;
   touch-action: none;
@@ -286,14 +290,8 @@ body.no-scroll {
    8. SLIDE/SECTION STYLING (angkasa_slide)
    ==================================================================== */
 .angkasa_slide {
-  position: relative;
   width: 100%;
   height: 100svh;
-  overflow: hidden;
-  scroll-snap-align: start;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 /* fallback jika browser tidak support 100svh */
@@ -301,9 +299,7 @@ body.no-scroll {
   .angkasa_slide {
     height: 100svh !important;
   }
-
 }
-
 
 /* ====================================================================
    9. NAVIGATION (Bottom Bar & Floating Menu)
@@ -324,9 +320,9 @@ body.no-scroll {
 }
 .nav-item .text-xs {
   transition:
-  opacity 300ms,
-  height 300ms,
-  margin 300ms;
+    opacity 300ms,
+    height 300ms,
+    margin 300ms;
   opacity: 1;
   height: 16px;
   line-height: 16px;
@@ -341,26 +337,21 @@ body.no-scroll {
 
 .nav-item.active-nav-style {
   transform: scale(1.5);
-  color: var(--inv-accent);
+  color: var(--menu-active);
 }
 
 .nav-item.active-nav-style i {
-  color: var(--inv-accent);
+  color: var(--menu-active);
 }
 .nav-item {
-  padding-left: 0.75rem !important;
-  padding-right: 0.75rem !important;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
   margin: 0 !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #2d3a50;
+  color: var(--menu-inactive);
   transition: all 0.2s ease-in-out;
 }
-
 
 .nav-item i {
   margin-bottom: 2px;
@@ -421,7 +412,7 @@ body.no-scroll {
   overflow: hidden;
   position: relative;
   z-index: 10;
-  border: 1px solid var(--menu-bg);
+  border: 1px solid var(--inv-border);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .card-cover {
@@ -569,7 +560,6 @@ body.no-scroll {
   text-transform: uppercase;
 }
 
-
 .navbar-top {
   top: 2rem;
   bottom: auto;
@@ -587,8 +577,6 @@ body.no-scroll {
 #credit-footer {
   transition: opacity 0.5s ease-in-out;
 }
-
-
 
 .map-with-accent-frame {
   box-shadow: 0 0 0 4px #c6915a;
@@ -609,13 +597,6 @@ body.no-scroll {
   opacity: 1;
 }
 
-#cover-section-overlay {
-  transition:
-  transform 1.2s cubic-bezier(0.65, 0.05, 0.36, 1),
-  opacity 0.4s ease-out;
-  width: 100vw;
-  height: 100vh;
-}
 .cover-fade-out {
   opacity: 0;
 }
@@ -624,7 +605,7 @@ body.no-scroll {
   opacity: 1;
 }
 
-@media (min-width: 421px) {
+@media (min-width: 425px) {
   #mobile-wrapper {
     height: 100%;
   }
@@ -640,10 +621,8 @@ body.no-scroll {
   }
 
   #bottom-navbar {
-    max-width: 372px !important;
+    max-width: 450px !important;
     left: 50%;
     transform: translateX(-50%);
   }
 }
-
-
