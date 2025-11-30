@@ -20,7 +20,7 @@ import OrnamentBackground from './OrnamentBackground.astro'
       >
         <h3
           data-animation-class="animate__fadeInDown"
-          class="ornament-item font-judul color-accent-2 border-rose-gold mb-4 inline-block border-b pb-2 text-3xl italic"
+          class="ornament-item font-judul color-accent-2 border-rose-gold mb-4 inline-block border-b pb-2 text-2xl italic sm:text-3xl"
         >
           ✤ Kehadiran ✤
         </h3>
@@ -30,14 +30,16 @@ import OrnamentBackground from './OrnamentBackground.astro'
           class="ornament-item font-dekor-1 animate__slower mb-4 text-lg font-semibold"
         >
           Kepada Yth.
-          <span id="rsvp-greeting-name" class="color-accent font-nama text-xl"
+          <span
+            id="rsvp-greeting-name"
+            class="color-accent font-nama text-xl break-words whitespace-normal"
             >[Nama Tamu]</span
-          >,
+          >
         </div>
 
         <p
           data-animation-class="animate__fadeInUp"
-          class="ornament-item font-dekor-1 animate__slower mb-8 text-[15px] font-medium"
+          class="ornament-item font-dekor-1 animate__slower mb-8 text-sm font-medium sm:text-[15px]"
         >
           Merupakan suatu kehormatan bagi kami apabila Anda berkenan hadir untuk
           memberikan doa restu. <br />Mohon konfirmasi kehadiran melalui tombol
@@ -48,7 +50,7 @@ import OrnamentBackground from './OrnamentBackground.astro'
           data-animation-class="animate__fadeInUp"
           id="open-rsvp-modal-btn"
           onclick="openModal('rsvp-form-modal')"
-          class="ornament-item color-accent-2 border-accent animate__delay-2s mx-auto inline-block rounded-full border px-6 py-3 text-sm font-bold uppercase shadow-inner duration-300 hover:bg-white/10"
+          class="ornament-item color-accent-2 border-accent animate__delay-2s mx-auto inline-block rounded-full border px-5 py-3 text-xs font-bold uppercase shadow-inner duration-300 hover:bg-white/10 sm:text-sm"
         >
           <i class="fas fa-calendar-check mr-2"></i> Konfirmasi Kehadiran
         </button>
@@ -64,7 +66,7 @@ import OrnamentBackground from './OrnamentBackground.astro'
   class="modal-backdrop fixed inset-0 z-[200] flex hidden items-center justify-center bg-white/30 p-4 py-6 opacity-0 backdrop-blur-sm transition-opacity duration-300"
 >
   <div
-    class="modal-content h-full w-full scale-95 transform overflow-hidden transition-all"
+    class="modal-content h-full max-h-[90vh] w-full scale-95 transform overflow-y-auto transition-all"
   >
     <div
       class="relative rounded-2xl bg-white p-6 text-center shadow-2xl"
@@ -78,7 +80,7 @@ import OrnamentBackground from './OrnamentBackground.astro'
           <input
             id="rsvp-name-modal"
             type="text"
-            class="mt-1 block w-full rounded-xl border border-(--inv-border) bg-white/30 px-3 py-2 shadow-sm backdrop-blur-sm"
+            class="mt-1 block w-full rounded-xl border border-[var(--inv-border)] bg-white/30 px-3 py-2 shadow-sm backdrop-blur-sm"
             placeholder="Nama Anda"
           />
         </div>
@@ -89,10 +91,10 @@ import OrnamentBackground from './OrnamentBackground.astro'
             >Apakah Anda akan hadir?</label
           >
 
-          <div class="custom-select-wrapper">
+          <div class="custom-select-wrapper relative">
             <div
               id="status-dropdown"
-              class="custom-select-display rounded-xl border border-(--inv-border)"
+              class="custom-select-display rounded-xl border border-[var(--inv-border)]"
             >
               <span id="status-text">Hadir</span>
               <i class="fa-solid fa-chevron-down arrow-icon"></i>
@@ -118,7 +120,7 @@ import OrnamentBackground from './OrnamentBackground.astro'
           <textarea
             id="rsvp-message-modal"
             rows="3"
-            class="mt-1 block w-full rounded-xl border border-(--inv-border) px-3 py-2"
+            class="mt-1 block w-full rounded-xl border border-[var(--inv-border)] px-3 py-2"
             placeholder="Tuliskan ucapan dan doa terbaik Anda..."></textarea>
         </div>
       </div>

@@ -42,7 +42,7 @@ const akadWaktuPenuh = `${akadMulai} - Selesai`
           data-animation-class="animate__fadeInDown"
           class="ornament-item animate__slower text-center"
         >
-          <div class="font-judul color-accent text-lg italic">
+          <div class="font-judul color-accent text-base italic sm:text-lg">
             ✤ Akad Pernikahan ✤
           </div>
           <div id="akad-time" class="text-[15px]">{akadWaktuPenuh}</div>
@@ -72,10 +72,13 @@ const akadWaktuPenuh = `${akadMulai} - Selesai`
           data-animation-class="animate__fadeInUp"
           class="ornament-item animate__slower mt-2 text-center"
         >
-          <div class="font-judul color-accent text-lg italic">
+          <div class="font-judul color-accent text-base italic sm:text-lg">
             ✤ Kediaman Wanita ✤
           </div>
-          <div id="akad-location" class="max-w-2xs text-center text-[15px]">
+          <div
+            id="akad-location"
+            class="mx-auto max-w-xs text-center text-[15px]"
+          >
             {akadLocation}
           </div>
         </div>
@@ -112,7 +115,9 @@ const akadWaktuPenuh = `${akadMulai} - Selesai`
               >
                 00
               </div>
-              <div class="color-accent mt-1 text-xs opacity-80">Hari</div>
+              <div class="color-accent mt-1 text-[13px] opacity-80 sm:text-xs">
+                Hari
+              </div>
             </div>
 
             <!-- Jam (Hours) -->
@@ -125,7 +130,9 @@ const akadWaktuPenuh = `${akadMulai} - Selesai`
               >
                 00
               </div>
-              <div class="color-accent mt-1 text-xs opacity-80">Jam</div>
+              <div class="color-accent mt-1 text-[13px] opacity-80 sm:text-xs">
+                Jam
+              </div>
             </div>
 
             <!-- Menit (Minutes) -->
@@ -138,7 +145,9 @@ const akadWaktuPenuh = `${akadMulai} - Selesai`
               >
                 00
               </div>
-              <div class="color-accent mt-1 text-xs opacity-80">Menit</div>
+              <div class="color-accent mt-1 text-[13px] opacity-80 sm:text-xs">
+                Menit
+              </div>
             </div>
 
             <!-- Detik (Seconds) - MENGHAPUS 'hidden sm:block' AGAR TAMPIL DI MOBILE -->

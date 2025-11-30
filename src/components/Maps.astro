@@ -26,14 +26,14 @@ const mapAddress = locationFullAddress || 'Alamat Belum Ditetapkan'
       <div
         class="content-layer font-dekor-1 mx-auto w-full max-w-[420px] px-4 py-4 text-center sm:px-6"
       >
-        <!-- MAPS WRAPPER -->
+        <!-- MAP BOX -->
         <div
           data-animation-class="animate__zoomIn"
           class="ornament-item animate__slower mx-auto mb-6 w-full"
         >
           <div
-            class="relative w-full overflow-hidden rounded-2xl border-2 border-(--inv-border) shadow-[0_4px_14px_rgba(0,0,0,0.15)]"
-            style="aspect-ratio: 1 / 1"
+            class="relative w-full overflow-hidden rounded-2xl border-[1.5px] border-(--inv-border) shadow-[0_4px_14px_rgba(0,0,0,0.15)] sm:border-2"
+            style="aspect-ratio: 5 / 7"
           >
             <iframe
               id="maps-iframe"
@@ -46,6 +46,7 @@ const mapAddress = locationFullAddress || 'Alamat Belum Ditetapkan'
           </div>
         </div>
 
+        <!-- TEXT INFO -->
         <div
           data-animation-class="animate__fadeInUp"
           class="ornament-item animate__slow text-center"
@@ -56,18 +57,21 @@ const mapAddress = locationFullAddress || 'Alamat Belum Ditetapkan'
           >
             {locationName}
           </div>
-          <div></div>
 
-          <div id="maps-address" class="font-dekor-1 mb-3 text-[15px]">
+          <div
+            id="maps-address"
+            class="font-dekor-1 mb-3 text-[15px] leading-relaxed"
+          >
             {mapAddress}
           </div>
 
+          <!-- BUTTON -->
           <a
             data-animation-class="animate__fadeInUp"
             id="maps-button"
             href={gmapsLink}
             target="_blank"
-            class="ornament-item color-accent-2 border-accent animate__delay-2s mx-auto inline-block w-60 transform rounded-full border px-6 py-3 text-sm font-bold uppercase shadow-inner transition duration-300 hover:bg-white/10"
+            class="ornament-item color-accent-2 border-accent animate__delay-2s mx-auto inline-block w-full max-w-[250px] rounded-full border px-6 py-3 text-sm font-bold uppercase shadow-inner transition duration-300 hover:bg-white/10"
           >
             <i class="fas fa-map-marked-alt mr-2"></i> Buka di Maps
           </a>
