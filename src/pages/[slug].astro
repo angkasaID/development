@@ -1,0 +1,11 @@
+---
+export function getStaticPaths() {
+  // Kembalikan array minimal agar Astro tidak error
+  return [{ params: { slug: 'anything' } }]
+}
+
+import Main from './index.astro'
+---
+
+<!-- Render layout utama, slug diabaikan -->
+<Main />
