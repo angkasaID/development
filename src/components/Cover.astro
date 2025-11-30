@@ -12,29 +12,29 @@ const { brideName, groomName } = UNDANGAN_CONFIG
   style="background-color: var(--inv-bg)"
 >
   <div
-    class="w-full h-full mx-auto relative background-modern1 angkasa_slide"
+    class="background-modern1 relative mx-auto h-full w-full overflow-hidden"
     style="max-width: 500px; box-shadow: 0 0 25px rgba(0, 0, 0, 0.4)"
   >
     <div
       id="cover"
-      class="w-full h-full flex flex-col justify-center items-center"
+      class="flex h-full w-full flex-col items-center justify-center"
       data-section="cover"
     >
       <img
-        class="frame-tl top-0 left-0 absolute animate__animated animate__fadeInTopLeft animate__slower"
+        class="frame-tl animate__animated animate__fadeInTopLeft animate__slower absolute top-0 left-0"
         src="/asset/images/tl.webp"
         onerror="this.src='https://placehold.co/150x150/C6915A/white?text=Top+Left'"
         alt="frame top left"
       />
       <img
-        class="frame-tr top-0 right-0 absolute animate__animated animate__fadeInTopRight animate__slower"
+        class="frame-tr animate__animated animate__fadeInTopRight animate__slower absolute top-0 right-0"
         src="/asset/images/tr.webp"
         onerror="this.src='https://placehold.co/150x150/C6915A/white?text=Top+Right'"
         alt="frame top right"
       />
 
       <div
-        class="ornamen-bawah right-0 bottom-0 w-full md:w-11/12 absolute"
+        class="ornamen-bawah absolute right-0 bottom-0 w-full md:w-11/12"
         style="transform: translate(0, 0)"
       >
         <div class="animate__animated animate__fadeInUp animate__slower">
@@ -49,7 +49,7 @@ const { brideName, groomName } = UNDANGAN_CONFIG
       </div>
 
       <div
-        class="absolute top-0 inset-x-0"
+        class="absolute inset-x-0 top-0"
         style="transform: scale(1.2); transform-origin: top center"
       >
         <div class="animate__animated animate__fadeInUp animate__slower">
@@ -63,7 +63,7 @@ const { brideName, groomName } = UNDANGAN_CONFIG
       </div>
 
       <div
-        class="frame-tl left-0 absolute top-0 animate__animated animate__fadeInTopLeft animate__slower"
+        class="frame-tl animate__animated animate__fadeInTopLeft animate__slower absolute top-0 left-0"
       >
         <div class="animate-left" style="transform: translate(-5%, 145%)">
           <img
@@ -76,7 +76,7 @@ const { brideName, groomName } = UNDANGAN_CONFIG
       </div>
 
       <div
-        class="frame-tr right-0 absolute top-0 animate__animated animate__fadeInTopRight animate__slower"
+        class="frame-tr animate__animated animate__fadeInTopRight animate__slower absolute top-0 right-0"
       >
         <div class="animate-right" style="transform: translate(5%, 145%)">
           <img
@@ -89,7 +89,7 @@ const { brideName, groomName } = UNDANGAN_CONFIG
       </div>
 
       <div
-        class="frame-bl absolute bottom-0 left-0 animate__animated animate__fadeInBottomLeft animate__slow"
+        class="frame-bl animate__animated animate__fadeInBottomLeft animate__slow absolute bottom-0 left-0"
         style="animation-delay: 2.5s"
       >
         <div class="animate-left" style="transform: translate(-29%, -85%)">
@@ -103,7 +103,7 @@ const { brideName, groomName } = UNDANGAN_CONFIG
       </div>
 
       <div
-        class="frame-bl absolute bottom-0 left-0 animate__animated animate__fadeInBottomLeft animate__slow"
+        class="frame-bl animate__animated animate__fadeInBottomLeft animate__slow absolute bottom-0 left-0"
         style="animation-delay: 2.2s"
       >
         <div class="animate-left" style="transform: translate(-27%, -87%)">
@@ -117,7 +117,7 @@ const { brideName, groomName } = UNDANGAN_CONFIG
       </div>
 
       <div
-        class="frame-bl absolute bottom-0 left-0 animate__animated animate__fadeInBottomLeft animate__slow"
+        class="frame-bl animate__animated animate__fadeInBottomLeft animate__slow absolute bottom-0 left-0"
         style="animation-delay: 2s"
       >
         <div class="animate-left" style="transform: translate(-16%, -70%)">
@@ -131,7 +131,7 @@ const { brideName, groomName } = UNDANGAN_CONFIG
       </div>
 
       <div
-        class="frame-br absolute bottom-0 right-0 animate__animated animate__fadeInBottomRight animate__slow"
+        class="frame-br animate__animated animate__fadeInBottomRight animate__slow absolute right-0 bottom-0"
         style="animation-delay: 2.5s"
       >
         <div class="animate-right" style="transform: translate(29%, -85%)">
@@ -145,7 +145,7 @@ const { brideName, groomName } = UNDANGAN_CONFIG
       </div>
 
       <div
-        class="frame-br absolute bottom-0 right-0 animate__animated animate__fadeInBottomRight animate__slow"
+        class="frame-br animate__animated animate__fadeInBottomRight animate__slow absolute right-0 bottom-0"
         style="animation-delay: 2.2s"
       >
         <div class="animate-right" style="transform: translate(27%, -87%)">
@@ -159,7 +159,7 @@ const { brideName, groomName } = UNDANGAN_CONFIG
       </div>
 
       <div
-        class="frame-br absolute bottom-0 right-0 animate__animated animate__fadeInBottomRight animate__slow"
+        class="frame-br animate__animated animate__fadeInBottomRight animate__slow absolute right-0 bottom-0"
         style="animation-delay: 2s"
       >
         <div class="animate-right" style="transform: translate(16%, -70%)">
@@ -173,9 +173,11 @@ const { brideName, groomName } = UNDANGAN_CONFIG
       </div>
 
       <div
-        class="anim-float-left ornamen-bawah left-0 bottom-0 w-[50%] absolute translate-x-[0%] translate-y-[10%]"
+        class="anim-float-left ornamen-bawah absolute bottom-0 left-0 w-[50%] translate-x-[0%] translate-y-[10%]"
       >
-        <div class="animate__animated animate__fadeInBottomLeft animate__slower">
+        <div
+          class="animate__animated animate__fadeInBottomLeft animate__slower"
+        >
           <img
             src="/asset/images/bl-2.webp"
             onerror="this.src='https://placehold.co/100x100/C6915A/white?text=Wayang+Kiri'"
@@ -186,9 +188,11 @@ const { brideName, groomName } = UNDANGAN_CONFIG
         </div>
       </div>
       <div
-        class="anim-float-left ornamen-bawah left-0 bottom-0 w-[30%] absolute translate-x-[20%] translate-y-[5%]"
+        class="anim-float-left ornamen-bawah absolute bottom-0 left-0 w-[30%] translate-x-[20%] translate-y-[5%]"
       >
-        <div class="animate__animated animate__fadeInBottomLeft animate__slower">
+        <div
+          class="animate__animated animate__fadeInBottomLeft animate__slower"
+        >
           <img
             src="/asset/images/bunga-kiri.webp"
             onerror="this.src='https://placehold.co/100x100/C6915A/white?text=Bunga+Kiri'"
@@ -200,9 +204,11 @@ const { brideName, groomName } = UNDANGAN_CONFIG
       </div>
 
       <div
-        class="anim-float-right ornamen-bawah right-0 bottom-0 w-[50%] absolute translate-x-[0%] translate-y-[10%]"
+        class="anim-float-right ornamen-bawah absolute right-0 bottom-0 w-[50%] translate-x-[0%] translate-y-[10%]"
       >
-        <div class="animate__animated animate__fadeInBottomRight animate__slower">
+        <div
+          class="animate__animated animate__fadeInBottomRight animate__slower"
+        >
           <img
             src="/asset/images/br-2.webp"
             onerror="this.src='https://placehold.co/100x100/C6915A/white?text=Wayang+Kanan'"
@@ -213,9 +219,11 @@ const { brideName, groomName } = UNDANGAN_CONFIG
         </div>
       </div>
       <div
-        class="anim-float-right ornamen-bawah right-0 bottom-0 w-[30%] absolute translate-x-[-20%] translate-y-[5%]"
+        class="anim-float-right ornamen-bawah absolute right-0 bottom-0 w-[30%] translate-x-[-20%] translate-y-[5%]"
       >
-        <div class="animate__animated animate__fadeInBottomRight animate__slower">
+        <div
+          class="animate__animated animate__fadeInBottomRight animate__slower"
+        >
           <img
             src="/asset/images/bunga-kanan.webp"
             onerror="this.src='https://placehold.co/100x100/C6915A/white?text=Bunga+Kanan'"
@@ -226,30 +234,34 @@ const { brideName, groomName } = UNDANGAN_CONFIG
         </div>
       </div>
 
-      <div class="card-cover p-7 text-center w-full max-w-sm">
+      <div class="card-cover w-full max-w-sm p-7 text-center">
         <div class="content-layer">
           <div
-            class="text-center animate__animated animate__zoomIn animate__slower mt-5 mb-3"
+            class="animate__animated animate__zoomIn animate__slower mt-5 mb-3 text-center"
             style="line-height: 1"
           >
-            <div class="mb-2 text-base font-judul italic">The Wedding of</div>
-            <div class="color-accent-2 font-latin-jawa text-7xl">{brideName}</div>
+            <div class="font-judul mb-2 text-base italic">The Wedding of</div>
+            <div class="color-accent-2 font-latin-jawa text-7xl">
+              {brideName}
+            </div>
             <div class="font-accent mb-2 text-5xl">&amp;</div>
-            <div class="color-accent-2 mb-2 font-latin-jawa text-7xl">{groomName}</div>
+            <div class="color-accent-2 font-latin-jawa mb-2 text-7xl">
+              {groomName}
+            </div>
           </div>
-          <div class="text-center mx-auto" style="max-width: 250px">
+          <div class="mx-auto text-center" style="max-width: 250px">
             <div
-              class="text-center bg-white/30 backdrop-blur-xl border border-(--inv-border) mb-3 py-3 px-2 rounded-2xl shadow-lg animate__animated animate__zoomIn animate__slower"
+              class="animate__animated animate__zoomIn animate__slower mb-3 rounded-2xl border border-(--inv-border) bg-white/30 px-2 py-3 text-center shadow-lg backdrop-blur-xl"
             >
               <div
-                class="mb-1 animate__animated animate__fadeInUp animate__slower"
+                class="animate__animated animate__fadeInUp animate__slower mb-1"
                 style="font-size: 14px"
               >
                 Kepada Yth;<br />Bapak/Ibu/Saudara/i
               </div>
               <div
                 id="guest-name-display"
-                class="text-2xl font-nama font-semibold animate__animated animate__fadeInUp animate__slower latin"
+                class="font-nama animate__animated animate__fadeInUp animate__slower latin text-2xl font-semibold"
               >
                 Nama Tamu
               </div>
@@ -258,7 +270,7 @@ const { brideName, groomName } = UNDANGAN_CONFIG
           <button
             id="open-button"
             data-target="#opening"
-            class="w-60 py-3 btn-utama text-btn font-semibold font-dekor-1 rounded-2xl shadow-lg animate__animated animate__zoomIn animate__slower animate-pulse-shadow"
+            class="btn-utama text-btn font-dekor-1 animate__animated animate__zoomIn animate__slower animate-pulse-shadow w-60 rounded-2xl py-3 font-semibold shadow-lg"
           >
             <i class="fas fa-envelope-open-text mr-2"></i> Buka Undangan
           </button>
@@ -268,13 +280,13 @@ const { brideName, groomName } = UNDANGAN_CONFIG
   </div>
 </div>
 <script is:inline>
-  document.addEventListener("DOMContentLoaded", () => {
-    const btn = document.getElementById("open-button");
-    if (!btn) return;
+  document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('open-button')
+    if (!btn) return
 
-    btn.addEventListener("click", () => {
+    btn.addEventListener('click', () => {
       // izinkan scroll — HANYA INI
-      document.body.classList.remove("no-scroll");
-    });
-  });
+      document.body.classList.remove('no-scroll')
+    })
+  })
 </script>
